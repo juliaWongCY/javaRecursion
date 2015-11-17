@@ -7,31 +7,55 @@ public class RecursionTestSuite {
     isPrimeTests();
     sumSquareDigitsTests();
     isHappyTests();
+    isCarmichaelTests();
 
     System.out.println("...tests complete.");
   }
 
   public static void gcdTests() {
     checkGCD(12, 16, 4);
-    // TODO: add test cases for greatest common divisor here.
+    checkGCD(33, 36, 3);
+    checkGCD(15, 90, 15);
+    checkGCD(14, 7, 7);
+    checkGCD(56, 24, 8);
+    
   }
 
   public static void isPrimeTests() {
     checkIsPrime(9, false);
-    // TODO: add test cases for isPrime here.
+    checkIsPrime(11, true);
+    checkIsPrime(1327, true);
+    checkIsPrime(4723, true);
+    checkIsPrime(3388, false);
+    
   }
 
   public static void sumSquareDigitsTests() {
     checkSumSquareDigits(10, 1);
     checkSumSquareDigits(103, 10);
-    // TODO: add test cases for sumSquareDigits here.
+    checkSumSquareDigits(123, 14);
+    checkSumSquareDigits(223, 17);
+    checkSumSquareDigits(451, 42);
+    
   }
 
   public static void isHappyTests() {
     checkIsHappy(397, true);
     checkIsHappy(123, false);
-    // TODO: add test cases for isHappy here.
+    checkIsHappy(97, true);
+    checkIsHappy(20, false);
+    checkIsHappy(139, true);
   }
+
+
+  public static void isCarmichaelTests() {
+    checkIsCarmichael(3, false);
+    checkIsCarmichael(561, true);
+    checkIsCarmichael(1105, true);
+    checkIsCarmichael(17, false);
+    checkIsCarmichael(341, false);
+  }
+
 
 
   private static void checkGCD(int x, int y, int expected) {
@@ -65,5 +89,12 @@ public class RecursionTestSuite {
           + ", got: " + actual);
     }
   }
-
+  
+  private static void checkIsCarmichael(int n, boolean expected) {
+    boolean actual = RecursionLibrary.isCarmichael(n);
+    if (actual != expected) {
+       System.out.println("isCarmichael(" + n + "); expected : " + expected
+           + ", got: " + actual);
+    }
+  }
 }

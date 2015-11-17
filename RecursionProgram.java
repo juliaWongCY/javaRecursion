@@ -27,5 +27,9 @@ public class RecursionProgram {
     if (RecursionLibrary.isHappy(n)) {
       System.out.println(n + " is happy.");
     }
+   
+     if (RecursionLibrary.isCarmichael(n)) {
+      System.out.println(n + " is Carmichael.");
+    }
   }
 }
