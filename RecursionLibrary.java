@@ -25,7 +25,7 @@ public class RecursionLibrary {
     }
   }
 
-   public static boolean checkPrime (int n, int a) {
+   private static boolean checkPrime (int n, int a) {
      if (a > Math.sqrt(n)) {
        return true;
      } else if (n % a == 0) {
